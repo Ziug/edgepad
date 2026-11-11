@@ -1,0 +1,25 @@
+name: EdgePad
+options:
+  deploymentTarget:
+    macOS: "27.0"
+  createIntermediateGroups: true
+targets:
+  EdgePad:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.edgepad.app
+        PRODUCT_NAME: EdgePad
+        MARKETING_VERSION: "1.7"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: EdgePad
+        INFOPLIST_KEY_LSUIElement: YES
+        MACOSX_DEPLOYMENT_TARGET: "27.0"
+        SWIFT_VERSION: "5.0"
+        SWIFT_OBJC_BRIDGING_HEADER: Sources/MultitouchBridge.h
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_APP_SANDBOX: NO
